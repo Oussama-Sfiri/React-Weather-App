@@ -23,7 +23,7 @@ export class App extends Component {
     const country = e.target.elements.country.value; // "e.target = <form>" et "e.target.elements = tout les elements du <form>" et "e.target.elements.country = l'element du form qui a l'atrribut (name="country") dans ce c'est l'input li ghaydekhel fih l'user le nom du pays" et finalement on stock la value saisie par l'user dans cette input dans la variable "country" bach nkhedmo fiha f l'API bach nfetchiw les infos dyl lweather dyl city ou lcoutry li dekhel l'user fles inputs
     if (city !== "" && country !== "") { // si l'user dekhel city et coutry fles inputs çàd makhelach les inputs khawyin
 
-      const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}%2C${country}&units=metric&appid=${API_KEY}`); // fetching data or response | we can do this : const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}%2C${country}&appid=${API_KEY}`).then((res) => res.json());
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}%2C${country}&units=metric&appid=${API_KEY}`); // fetching data or response | we can do this : const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}%2C${country}&appid=${API_KEY}`).then((res) => res.json());
       const data = await res.json(); // converting response or the data to a json format
       this.setState({
         temperature : data.main.temp,
