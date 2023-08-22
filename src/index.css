@@ -1,13 +1,122 @@
+
 body {
+  background-image: url(../src/Assets/sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: rgb(20, 103, 126);
+  width: 60%;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 15px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+
+input[type="text"] {
+  display: block;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  padding-bottom: 4px;
+  color: #FFF !important;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 17px;
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #cacaca;
+}
+
+button {
+  border: 0;
+  padding: 8px 20px;
+  margin: 2px 0 20px 0px;
+  border-radius: 3px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #FFF;
+  color: rgb(20, 103, 126);
+  font-weight: 200;
+  transition: color 0.4s , background-color 0.4s , outline 0.4s;
+}
+
+button:active {
+  outline: none;
+}
+
+button:hover {
+  background-color: rgb(20, 103, 126);
+  color: #FFF;
+  outline: 1px solid #FFF;
+}
+
+.info {
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.info-key {
+  color: rgb(20, 103, 126);
+  border-bottom: 1px solid rgba(75, 75, 75, 0.06);
+  font-weight: 400;
+  margin-left: 40px;
+}
+
+.info-key:last-child {
+  border: 0;
+}
+
+.info-value {
+  color: rgb(20, 103, 126);
+  font-weight: 200; 
+}
+
+@media (max-width: 575px) {
+  .info {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .form-container{
+    width: 80%;
+  }
+
+  .info-key {
+    margin-left: 20px;
+  }
+
 }
